@@ -1,0 +1,314 @@
+<div id="product-listing__search-filters" class="product-listing__search-filters px-3">
+    <form onchange="product_sidebar_fetch();" method="POST" id="product-sidebar-filter-form">
+        <a class="search-filter__reset" href="#">Refresh Filter</a>
+        {# Main Contact Terminals Start #}
+        <div class="search-filter__item">
+            <a class="btn btn-collapse" data-toggle="collapse" data-target="#searchFilterOne" aria-expanded="true" aria-controls="collapseOne">
+                Main Contact Terminals
+            </a>
+            <div id="searchFilterOne" class="collapse show" data-parent="#product-listing__search-filters">
+                <div class="select-wrapper">
+                    <label for="select-contact-terminal-config">Main Contact Terminal Configuration</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="contactTerminalConfig" id="select-contact-terminal-config">
+                            <option selected="true" value="">Any</option>
+                            <option value="MALE/FEMALE STUD">Male / Female Stud</option>
+                            <option value="BUSBAR">Busbar</option>
+                            <option value="FEMALE STUD">Female Stud</option>
+                            <option value="MALE STUD">Male Stud</option>
+                            <option value="PCB">PCB</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-current-rating-interrupted">Thermal Current Rating Interrupted Current</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="currentRatingInterrupted" id="select-current-rating-interrupted">
+                            <option value="0">Any</option>
+                            <option value="80">80</option>
+                            <option value="100">100</option>
+                            <option value="125">125</option>
+                            <option value="150">150</option>
+                            <option value="250">250</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-current-rating-uninterrupted">Thermal Current Rating Uninterrupted Current</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="currentRatingUninterrupted" id="select-current-rating-uninterrupted">
+                            <option value="">Any</option>
+                            <option value="80">80</option>
+                            <option value="100">100</option>
+                            <option value="125">125</option>
+                            <option value="150">150</option>
+                            <option value="250">250</option>
+                            <option value="300">300</option>
+                            <option value="350">350</option>
+                            <option value="400">400</option>
+                            <option value="500">500</option>
+                            <option value="600">600</option>
+                            <option value="800">800</option>
+                            <option value="1200">1200</option>
+                            <option value="1800">1800</option>
+                            <option value="2000">2000</option>
+                            <option value="2400">2400</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-config">Configuration</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="config" id="select-config">
+                            <option value="">Any</option>
+                            <option value="NORMALLY OPEN">Normally Open</option>
+                            <option value="MOTOR REVERSING">Motor Reversing</option>
+                            <option value="NORMALLY CLOSED">Normally Closed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-pole">Pole</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="pole" id="select-pole">
+                            <option value="">Any</option>
+                            <option value="SINGLE POLE">Single Pole</option>
+                            <option value="DOUBLE POLE">Double Pole</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-throw">Throw</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="throw" id="select-throw">
+                            <option value="">Any</option>
+                            <option value="SINGLE THROW">Single Throw</option>
+                            <option value="DOUBLE THROW">Double Throw</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# Main Contact Terminals End #}
+
+        {# Contacts Start #}
+        <div class="search-filter__item">
+            <a class="btn btn-collapse collapsed mt-3" data-toggle="collapse" data-target="#searchFilterTwo" aria-expanded="false" aria-controls="collapseThree">
+                Contacts
+            </a>
+            <div id="searchFilterTwo" class="collapse" data-parent="#product-listing__search-filters">
+                <div class="select-wrapper">
+                    <label for="select-large-tips">Large Tips</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="largeTips" id="select-large-tips">
+                            <option value="">Any</option>
+                            <option value="STANDARD">No</option>
+                            <option value="LARGE">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-textured-tips">Textured Tips</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="texturedTips" id="select-textured-tips">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# Contacts End #}
+
+        {# Coil Start #}
+        <div class="search-filter__item">
+            <a class="btn btn-collapse collapsed mt-3" data-toggle="collapse" data-target="#searchFilterThree" aria-expanded="false" aria-controls="collapseTwo">
+                Coil
+            </a>
+            <div id="searchFilterThree" class="collapse" data-parent="#product-listing__search-filters">
+                <div class="select-wrapper">
+                    <label for="select-manual-override">Manual Override</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="manualOverride" id="select-manual-override">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-vacuum-impregnation">Vacuum Impregnation</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="vacuumImpregnation" id="select-vacuum-impregnation">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-flying-leads">Flying Leads</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="flyingLeads" id="select-flying-leads">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-magnetic-latching">Magnetic Latching</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="magneticLatching" id="select-magnetic-latching">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# Coil End #}
+
+        {# Additional Features Start #}
+        <div class="search-filter__item">
+            <a class="btn btn-collapse collapsed mt-3" data-toggle="collapse" data-target="#searchFilterFour" aria-expanded="false" aria-controls="collapseThree">
+                Additional Features
+            </a>
+            <div id="searchFilterFour" class="collapse" aria-labelledby="headingThree" data-parent="#product-listing__search-filters">
+                <div class="select-wrapper">
+                    <label for="select-aux-standard">Auxiliary Standard</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="auxStandard" id="select-aux-standard">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-aux-gold">Auxiliary Gold</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="auxGold" id="select-aux-gold">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-aux-v3">Auxiliary V3</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="auxV3" id="select-aux-v3">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-aux-v3-gold">Auxiliary V3 Gold</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="auxV3Gold" id="select-aux-v3-gold">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-magnetic-blowouts">Magnetic Blowouts</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="magneticBlowouts" id="select-magnetic-blowouts">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-magnetic-blowouts-hp">Magnetic Blowouts High Powered</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="magneticBlowoutsHp" id="select-magnetic-blowouts-hp">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-ee">EE</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="ee" id="select-ee">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-economy">Economy</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="economy" id="select-economy">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-lockable">Lockable</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="lockable" id="select-lockable">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-ip66">IP66</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="ip66" id="select-ip66">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-reversed-np-sensitive">Reversed Non Polarity Sensitive</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="reversedNpSensitive" id="select-reversed-np-sensitive">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-washable">Washable</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="washable" id="select-washable">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-wrapper">
+                    <label for="select-integral-fuse-holder">Integral Fuse Holder</label>
+                    <div class="select-wrapper__inner">
+                        <select class="search-filters--sidebar" name="integralFuseHolder" id="select-integral-fuse-holder">
+                            <option>Any</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# Additional Features End #}
+    </form>
+</div>
